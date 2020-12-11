@@ -8,6 +8,25 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <form id="newItemForm">
+        <div id="form-wrapper">
+            <div id="form-item">
+                <label for="title">What TV Show/ Movie are you looking forward to watching?</label>
+                <input type="text" id="title" required/>
+            </div>
+            <div id="form-item">
+                <label for="where">Where will you be watching it?</label>
+                <select id="where">
+                    <option value="" disabeld selected></option>
+                    <option value="netflix">Netflix</option>
+                    <option value="disney">Disney+</option>
+                    <option value="amazon">Amazon Prime</option>
+                </select>
+            </div>
+        </div>
+        <input type="submit" value="save"/>
+    </form>
+    <h1>To Watch List</h1>
+    <ul id="watch-list"></ul>
 </body>
 </html>
