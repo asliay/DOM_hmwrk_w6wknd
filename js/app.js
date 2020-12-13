@@ -1,10 +1,15 @@
+// D&D Character Tracker
+
 document.addEventListener("DOMContentLoaded",() => {
 
     const newItemForm = document.querySelector("#new-character-form");
     newItemForm.addEventListener("submit", handleFormSubmit);
     
-    const characterList= document.querySelector("#character-list");
-    
+    // Page loads with three characters already in list (these 3 functions can be found in helper/existingCharacters.js)
+    addEg(); 
+    addOk();
+    addBuck();
+
     createDeleteButton();
 
     const deleteAllButton = document.querySelector("#delete-button")
@@ -30,7 +35,7 @@ const createCharacterListItem = function (form){
     characterListItem.classList.add("character-list-item");
     // Creates character name variable and appends to created list item
     const characterName = document.createElement("h2");
-    characterName.textContent = `Name: ${form.name.value}`;
+    characterName.textContent = `${form.name.value} (Level ${form.level.value})`;
     characterListItem.appendChild(characterName);
     // Creates character race variable and appends to created list item
     const characterRace = document.createElement("h3");
@@ -40,10 +45,6 @@ const createCharacterListItem = function (form){
     const characterClass = document.createElement("h3");
     characterClass.textContent = `Class: ${form.class.value} (${form.subclass.value})`;
     characterListItem.appendChild(characterClass);
-    // Creates character level variable and appends to created list item
-    const characterLevel = document.createElement ("h3");
-    characterLevel.textContent = `Level: ${form.level.value}`;
-    characterListItem.appendChild(characterLevel);
     
     return characterListItem;
 }
@@ -67,7 +68,8 @@ const createDeleteButton = function (){
    parentElement.appendChild(deleteAllButton);
 }
 
-// (CAN'T GET THIS TO WORK) Helper function checking if there is any content in the list of characters
+// (CAN'T GET THIS TO WORK THE WAY IT SHOULD) Helper function checking if there is any content in the list of characters
 const listNotEmpty = function (element){
     return !!element.childElementCount;
 }
+

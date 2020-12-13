@@ -1,0 +1,37 @@
+body {
+    font-family: 'Raleway';
+    margin-left: 30px;
+    background-color: firebrick;
+    color: white;
+}
+
+h1 {
+    font-family: 'Playfair Display';
+}
+
+.btn {
+    margin-left: 20px;
+}
+
+#form-wrapper {
+    padding: 15px;
+}
+
+#form-item {
+    padding: 5px;
+}
+
+#character-list {
+    display:flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.character-list-item {
+    width: 25%;
+    margin: 0.5rem 0.5rem;
+    padding: 0.5rem 0.8rem;
+    border: 2px solid white;
+    /* border-radius: 8%; */
+    background: firebrick;
+}
