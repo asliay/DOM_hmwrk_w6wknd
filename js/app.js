@@ -31,27 +31,21 @@ const createCharacterListItem = function (form){
     // Creates list item for each form submission
     const characterListItem = document.createElement("li");
     characterListItem.classList.add("character-list-item");
-    // Creates character name variable and appends to created list item
+    // Creates characterName variable and appends to created list item
     const characterName = document.createElement("h2");
     characterName.textContent = `${form.name.value} (Level ${form.level.value})`;
     
-    // Creates character race variable and appends to created list item
+    // Creates characterRace variable and appends to created list item
     const characterRace = document.createElement("h3");
     characterRace.textContent = `Race: ${form.race.value}`;
     
-    // Creates character class variable and appends to created list item (includes subclass in listing)
+    // Creates characterClass variable and appends to created list item (includes subclass in listing)
     const characterClass = document.createElement("h3");
     characterClass.textContent = `Class: ${form.class.value} (${form.subclass.value})`;
 
     const childrenElements = [characterName, characterRace, characterClass]
     appendMultiple(childrenElements, characterListItem);
     return characterListItem;
-}
-
-// Function to clear character list when delete button is clicked
-const handleDeleteButton = function (){
-    const characterList = document.querySelector('#character-list');
-    characterList.innerHTML = '';
 }
 
 // Function that creates delete all button
@@ -65,5 +59,13 @@ const createDeleteButton = function (){
 
    parentElement.appendChild(deleteAllButton);
 }
+
+// Function to clear character list when delete button is clicked
+const handleDeleteButton = function (){
+    const characterList = document.querySelector('#character-list');
+    characterList.innerHTML = '';
+}
+
+
 
 
