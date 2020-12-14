@@ -11,6 +11,9 @@ h1 {
 
 .btn {
     margin-left: 20px;
+    background-color: white;
+    border: 10px rebeccapurple;
+    box-shadow: none;
 }
 
 #form-wrapper {
@@ -29,9 +32,10 @@ h1 {
 
 .character-list-item {
     width: 25%;
-    margin: 0.5rem 0.5rem;
-    padding: 0.5rem 0.8rem;
+    margin: 1rem 1rem;
+    padding: 1rem 1rem;
     border: 2px solid white;
     /* border-radius: 8%; */
     background: firebrick;
 }
+
